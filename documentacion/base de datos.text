@@ -1,0 +1,504 @@
+
+base de datos upqroo
+
+join para grupos sin carrera
+SELECT grupo.*,materia.*,personal.* FROM `grupo` INNER JOIN materia on materia.MATCVE=grupo.MATCVE INNER JOIN personal on personal.PERCVE=grupo.PERCVE WHERE CARCVE=0
+
+
+
+base de datos upqroo2
+
+SELECT * FROM `grupo` WHERE CARCVE=0
+ 
+
+ no hay 
+
+
+
+ ******** Problemas en la normalizacion ***********
+
+Migracion Alumnos 
+se elimimam los siguientes datos repetidos de la bd upqroo2 tabla alumno
+{
+    [
+        {
+            "ALUCTR": 202000042,
+            "ALUAPP": "AGUIRRE",
+            "ALUAPM": "AGUIRRE",
+            "ALUNOM": "DANA YUREM"
+        },
+        {
+            "ALUCTR": 202000043,
+            "ALUAPP": "AKE",
+            "ALUAPM": "VICTORIA",
+            "ALUNOM": "DAVID ABIMAEL"
+        },
+        {
+            "ALUCTR": 202000044,
+            "ALUAPP": "ANTONIO",
+            "ALUAPM": "ELIZALDE",
+            "ALUNOM": "HECTOR ENRIQUE"
+        },
+        {
+            "ALUCTR": 202000006,
+            "ALUAPP": "CANCHE",
+            "ALUAPM": "IZQUIERDO",
+            "ALUNOM": "JOHAN EMMANUEL"
+        },
+        {
+            "ALUCTR": 202000007,
+            "ALUAPP": "CANO",
+            "ALUAPM": "CUPUL",
+            "ALUNOM": "ADIEL JAIR"
+        },
+        {
+            "ALUCTR": 202000045,
+            "ALUAPP": "COUTI?O",
+            "ALUAPM": "TORRES",
+            "ALUNOM": "INGRID"
+        },
+        {
+            "ALUCTR": 202000010,
+            "ALUAPP": "DE LA CRUZ",
+            "ALUAPM": "HERNANDEZ",
+            "ALUNOM": "DANIELA"
+        },
+        {
+            "ALUCTR": 202000011,
+            "ALUAPP": "DIAZ",
+            "ALUAPM": "ESCOBEDO",
+            "ALUNOM": "CINTHYA FERNANDA"
+        },
+        {
+            "ALUCTR": 202000012,
+            "ALUAPP": "DIAZ",
+            "ALUAPM": "JIMENEZ",
+            "ALUNOM": "MARIA FERNANDA"
+        },
+        {
+            "ALUCTR": 202000013,
+            "ALUAPP": "FLORES",
+            "ALUAPM": "MOLINA",
+            "ALUNOM": "OSCAR MARTIN"
+        },
+        {
+            "ALUCTR": 202000014,
+            "ALUAPP": "GALAN",
+            "ALUAPM": "ALCUDIA",
+            "ALUNOM": "IORY AXEL"
+        },
+        {
+            "ALUCTR": 202000046,
+            "ALUAPP": "GARCIA",
+            "ALUAPM": "MONTEJO",
+            "ALUNOM": "ISRAEL FERNANDO"
+        },
+        {
+            "ALUCTR": 202000047,
+            "ALUAPP": "GOMEZ",
+            "ALUAPM": "ROBLERO",
+            "ALUNOM": "SAYMA MARIELY"
+        },
+        {
+            "ALUCTR": 202000048,
+            "ALUAPP": "GONZALEZ",
+            "ALUAPM": "LORIA",
+            "ALUNOM": "JULIAN EFRAIN DE JESUS"
+        },
+        {
+            "ALUCTR": 202000049,
+            "ALUAPP": "GONZALEZ",
+            "ALUAPM": "LORIA",
+            "ALUNOM": "RICARDO ISRAEL DE LOS SANTOS"
+        },
+        {
+            "ALUCTR": 202000050,
+            "ALUAPP": "GONZALEZ",
+            "ALUAPM": "MACHUCO",
+            "ALUNOM": "SANTIAGO"
+        },
+        {
+            "ALUCTR": 202000015,
+            "ALUAPP": "HAU",
+            "ALUAPM": "SOSA",
+            "ALUNOM": "AARON AUGUSTO"
+        },
+        {
+            "ALUCTR": 202000016,
+            "ALUAPP": "HIDALGO",
+            "ALUAPM": "VARGAS",
+            "ALUNOM": "ENYA IKERNE"
+        },
+        {
+            "ALUCTR": 202000051,
+            "ALUAPP": "HUAN",
+            "ALUAPM": "UICAB",
+            "ALUNOM": "LUIS ANDRES"
+        },
+        {
+            "ALUCTR": 202000017,
+            "ALUAPP": "KINIL",
+            "ALUAPM": "KUMUL",
+            "ALUNOM": "ESTEBAN"
+        },
+        {
+            "ALUCTR": 202000018,
+            "ALUAPP": "KOYOC",
+            "ALUAPM": "HAU",
+            "ALUNOM": "ALAN YAIR"
+        },
+        {
+            "ALUCTR": 202000019,
+            "ALUAPP": "LARA",
+            "ALUAPM": "SANDOVAL",
+            "ALUNOM": "FRANCISCO"
+        },
+        {
+            "ALUCTR": 202000020,
+            "ALUAPP": "LEMUS",
+            "ALUAPM": "MORRUGARES",
+            "ALUNOM": "IAN ISRAEL"
+        },
+        {
+            "ALUCTR": 202000052,
+            "ALUAPP": "LOPEZ",
+            "ALUAPM": "MARTINEZ",
+            "ALUNOM": "ZACARIAS"
+        },
+        {
+            "ALUCTR": 202000021,
+            "ALUAPP": "LOPEZ",
+            "ALUAPM": "MOJICA",
+            "ALUNOM": "OMAR"
+        },
+        {
+            "ALUCTR": 202000022,
+            "ALUAPP": "LOPEZ",
+            "ALUAPM": "PABLO",
+            "ALUNOM": "ESMERALDA"
+        },
+        {
+            "ALUCTR": 202000023,
+            "ALUAPP": "MAGA?A",
+            "ALUAPM": "GONZALEZ",
+            "ALUNOM": "DARWIN JOEL"
+        },
+        {
+            "ALUCTR": 202000024,
+            "ALUAPP": "MAGA?A",
+            "ALUAPM": "PONCE",
+            "ALUNOM": "NAOMI"
+        },
+        {
+            "ALUCTR": 202000053,
+            "ALUAPP": "MARTINEZ",
+            "ALUAPM": "CANCHE",
+            "ALUNOM": "NEYSI RUBI"
+        },
+        {
+            "ALUCTR": 202000025,
+            "ALUAPP": "MENESES",
+            "ALUAPM": "CAUICH",
+            "ALUNOM": "AXEL EFRAIN"
+        },
+        {
+            "ALUCTR": 202000026,
+            "ALUAPP": "MIRANDA",
+            "ALUAPM": "MARTINEZ",
+            "ALUNOM": ".ALEJANDRO CESAR"
+        },
+        {
+            "ALUCTR": 202000027,
+            "ALUAPP": "MONDRAGON",
+            "ALUAPM": "RIOS",
+            "ALUNOM": "NANCY CIRENIA"
+        },
+        {
+            "ALUCTR": 202000054,
+            "ALUAPP": "MONTES",
+            "ALUAPM": "MORFIN",
+            "ALUNOM": "DAYANE ANDREA"
+        },
+        {
+            "ALUCTR": 202000028,
+            "ALUAPP": "MORALES",
+            "ALUAPM": "MUKUL",
+            "ALUNOM": "GRECIA ALICIA"
+        },
+        {
+            "ALUCTR": 202000029,
+            "ALUAPP": "MORENO",
+            "ALUAPM": "AYVAR",
+            "ALUNOM": "XIMENA"
+        },
+        {
+            "ALUCTR": 202000055,
+            "ALUAPP": "MU?OZ",
+            "ALUAPM": "EUAN",
+            "ALUNOM": "YANETH DE LOS ANGELES"
+        },
+        {
+            "ALUCTR": 202000056,
+            "ALUAPP": "NAVARRO",
+            "ALUAPM": "TREJO",
+            "ALUNOM": "DANNA VIRGEN"
+        },
+        {
+            "ALUCTR": 202000030,
+            "ALUAPP": "OREGON",
+            "ALUAPM": "PADRON",
+            "ALUNOM": "MARVY"
+        },
+        {
+            "ALUCTR": 202000057,
+            "ALUAPP": "PAREDES",
+            "ALUAPM": "ROMERO",
+            "ALUNOM": "ARELI JOHANA"
+        },
+        {
+            "ALUCTR": 202000058,
+            "ALUAPP": "PEREZ",
+            "ALUAPM": "OZUNA",
+            "ALUNOM": "IAN DANIEL"
+        },
+        {
+            "ALUCTR": 202000031,
+            "ALUAPP": "PUC",
+            "ALUAPM": "OSORIO",
+            "ALUNOM": "HENRI GERARDO"
+        },
+        {
+            "ALUCTR": 202000032,
+            "ALUAPP": "RAMIREZ",
+            "ALUAPM": "LARREA",
+            "ALUNOM": "URIEL"
+        },
+        {
+            "ALUCTR": 202000033,
+            "ALUAPP": "REYES",
+            "ALUAPM": "CARRILLO",
+            "ALUNOM": "DANA PAOLA"
+        },
+        {
+            "ALUCTR": 202000034,
+            "ALUAPP": "REYES",
+            "ALUAPM": "FLORES",
+            "ALUNOM": "KARLA ARLETH"
+        },
+        {
+            "ALUCTR": 202000059,
+            "ALUAPP": "RODRIGUEZ",
+            "ALUAPM": "BALAM",
+            "ALUNOM": "MICHELLE JAQUELINE"
+        },
+        {
+            "ALUCTR": 202000060,
+            "ALUAPP": "RODRIGUEZ",
+            "ALUAPM": "CALAM",
+            "ALUNOM": "PERLA ELIZABETH"
+        },
+        {
+            "ALUCTR": 202000035,
+            "ALUAPP": "ROMAY",
+            "ALUAPM": "BATUN",
+            "ALUNOM": "ADRIAN RAMIRO"
+        },
+        {
+            "ALUCTR": 202000037,
+            "ALUAPP": "SALAZAR",
+            "ALUAPM": "PECH",
+            "ALUNOM": "CINDY MARIELA"
+        },
+        {
+            "ALUCTR": 202000038,
+            "ALUAPP": "SALINAS",
+            "ALUAPM": "MARTINEZ",
+            "ALUNOM": "RODOLFO"
+        },
+        {
+            "ALUCTR": 202000039,
+            "ALUAPP": "SOLIS",
+            "ALUAPM": "SANCHEZ",
+            "ALUNOM": "ARIEL MIRAEL"
+        },
+        {
+            "ALUCTR": 202000061,
+            "ALUAPP": "VALDIVIEZO",
+            "ALUAPM": "VICENTE",
+            "ALUNOM": "JEISON"
+        },
+        {
+            "ALUCTR": 202000040,
+            "ALUAPP": "VAQUERO",
+            "ALUAPM": "BAOUCHOTH",
+            "ALUNOM": "KENYA"
+        },
+        {
+            "ALUCTR": 202000062,
+            "ALUAPP": "VAZQUEZ",
+            "ALUAPM": "VAZQUEZ",
+            "ALUNOM": "DAMARIS JAQUELINE"
+        },
+        {
+            "ALUCTR": 202000041,
+            "ALUAPP": "YAH",
+            "ALUAPM": "SOSA",
+            "ALUNOM": "PAOLA GUADALUPE"
+        },
+        {
+            "ALUCTR": 202000160,
+            "ALUAPP": "CONSTANTINO",
+            "ALUAPM": "GONZALEZ",
+            "ALUNOM": "DANIELA BELEN"
+        },
+        {
+            "ALUCTR": 202000214,
+            "ALUAPP": "MACIAS",
+            "ALUAPM": "HERNANDEZ",
+            "ALUNOM": "BRENDA PAOLA"
+        },
+        {
+            "ALUCTR": 202000210,
+            "ALUAPP": "LOPEZ",
+            "ALUAPM": "PEREZ",
+            "ALUNOM": "MARIANO"
+        },
+        {
+            "ALUCTR": 202000165,
+            "ALUAPP": "CRUZ",
+            "ALUAPM": "LIERA",
+            "ALUNOM": "YESHUA"
+        },
+        {
+            "ALUCTR": 202000170,
+            "ALUAPP": "DIAZ",
+            "ALUAPM": "LUNA",
+            "ALUNOM": "CLAUDIA IRENE"
+        },
+        {
+            "ALUCTR": 202000024,
+            "ALUAPP": "PECH",
+            "ALUAPM": "GARCIA",
+            "ALUNOM": "KARINA"
+        }
+    ]
+}
+
+tabla departamento
+{
+    [
+        201,
+        'DEPARTAMENTO DESCONOCIDO',
+        'D/N',
+        '2022-07-18 00: 54: 52',
+        '2022-07-18 00: 54: 52'
+    ]
+}
+ 
+base de datos uqproo
+ tabla:personal
+{
+    Repetido = 0 pernom perape 201,Depto: 1,existe = 2
+    AL
+    Repetido = 311 JOSE ARTURO CANTO PEREZ 201,Depto: 1,existe = 3
+
+    Repetido = 0 pernom perape 201,Depto: 1,existe = 2
+    AL
+    Repetido = 311 JOSE ARTURO CANTO PEREZ 201,Depto: 1,existe = 3
+    Repetido = 312 JAIME MOLLINEDO GOMEZ 201,Depto: 1,existe = 2
+    Repetido = 313 JOSE ARMANDO ORTIZ LANDA 201,Depto: 1,existe = 2
+    Repetido = 314 MARIA DE LOURDES VILLALOBOS LOPEZ 201,Depto: 1,existe = 2
+    Repetido = 315 AHIEZER ELIZUR CATZIM JIMENEZ 201,Depto: 1,existe = 2
+    Repetido = 316 CARLOS ROMAN MARIN DAVILA 201,Depto: 1,existe = 2
+    Repetido = 317 JANETH BERENICE TRUJILLO REJON 201,Depto: 1,existe = 2
+    Repetido = 318 NICOLASA DEL ROSARIO CHIMAL SULUB 201,Depto: 1,existe = 2
+    Repetido = 319 POR ASIGNAR DOS 202,Depto: 1,existe = 2
+    Repetido = 320 LILIANA RAMOS GARCIA 201,Depto: 1,existe = 2
+    Repetido = 321 ALBERTO HUGO VELEZ ACOSTA 201,Depto: 1,existe = 2
+    Repetido = 322 LILIANA RAMOS GARCIA 201,Depto: 1,existe = 2
+    Repetido = 323 CRUZ CRUZ TORRES 201,Depto: 1,existe = 2
+    Repetido = 324 HECTOR BRAVO GONZALEZ 201,Depto: 1,existe = 2
+    Repetido = 325 MARIA EDITH TAPIA GUTIERREZ 201,Depto: 1,existe = 2
+    Repetido = 326 ILDEFONSO PECH PECH 201,Depto: 1,existe = 2
+    Repetido = 327 GUILLERMINA PECH PECH 201,Depto: 1,existe = 2
+    Repetido = 328 MARCO ANTONIO BARRAGAN GARC?A 201,Depto: 1,existe = 2
+}
+
+base de datos uqproo
+ tabla:grupo
+ 
+
+
+ aqui : {
+    "id": 2488,
+    "PDOCVE": 3153,
+    "CARCVE": "6",<-- no hay un plan con la carrera=6
+    "PLACVE": "A",<-- no hay un plan con clave='A'
+    "ESPCVE": "",
+    "PAQCVE": "01A",
+    "MATCVE": "CAD",
+    "GPOCVE": "A",
+    "LIMNUM": "40",
+    "INSNUM": "40",
+    "PERCVE": "48"
+}
+
+PLan : [] no existe un plan en la realaciones carrera 6(BIOMedica) y plan 'A' 
+
+****** 
+--->>  nota: se creo a mano para poder normalizar la tabla se puede poner la oficial si existe
+
+
+comando sql para las tablas evasys_upqroo y upqroo
+*opcional correr en una sola bd upqroo y migrar despues la funcion planM de Controlador  Migraciones/InsertarDatos.php
+> INSERT INTO `plan`(clave, plan,carrera_id) VALUES('A', 'IBOM-2015',
+6);
+
+DATOS REPETIDOS EJEMPLO
+(`id`, `PDOCVE`, `CARCVE`, `PLACVE`, `ESPCVE`, `PAQCVE`, `MATCVE`, `GPOCVE`, `LIMNUM`, `INSNUM`, `PERCVE`)
+(168,
+3122,      '3',     'A',      '',       '051',      'BDN',  '01',     '20',     '12',       '81' )
+(308,
+3122,      '3',     'A',      '',       '052',      'BDN',  '02',     '20',     '10',       '81' )
+(3589,
+3122,      '3',     'A',      '',       '051',      'BDN',  '01',     '20',     '12',       '81' )
+(3729,
+3122,      '3',     'A',      '',       '052',      'BDN',  '02',     '20',     '10',       '81' )
+
+SABER QUE COLUMNAS SON IMPORTANTES SOLO VARIA EL PAQCVE GPOCVE INSNUM 
+
+
+INCONSITENCIA EN BASE DE DATOS upqroo2 TABLA GRUPO
+SELECT * FROM `grupo` WHERE MATCVE='INGI' AND PERCVE=247
+
+
+SELECT * FROM `periodo_detalle` WHERE grupo =""
+
+
+id	periodo_id	carrera_id	personal_id	materia_id	grupo	plan_id	created_at	updated_at	
+1304	9       	1       	41          236 	  " "           1        NULL    NULL	
+3290	19      	3       	232         58  	  " "           3        NULL    NULL	
+3305	19      	1       	247         31  	  " "           1        NULL    NULL	
+3306	19      	1       	112         37  	  " "           1        NULL    NULL	
+3307	19      	1       	272         35  	  " "           1        NULL    NULL	
+3308	19      	1       	147         36  	  " "           1        NULL    NULL	
+3309	19      	1       	308         34  	  " "           1        NULL    NULL	
+3310	19      	1       	5           32  	  " "           1        NULL    NULL	
+3311	19      	1       	232         33  	  " "           1        NULL    NULL	
+3312	19      	1       	53          31  	  " "           1        NULL    NULL	
+3313	19      	1       	189         37  	  " "           1        NULL    NULL	
+3314	19      	1       	247         35  	  " "           1        NULL    NULL	
+3315	19      	1       	262         36  	  " "           1        NULL    NULL	
+3316	19      	1       	119         34  	  " "           1        NULL    NULL	
+3317	19      	1       	146         33  	  " "           1        NULL    NULL	
+3318	19      	1       	308         82  	  " "           1        NULL    NULL	
+3319	19      	1       	306         86  	  " "           1        NULL    NULL	
+3320	19      	1       	222         87  	  " "           1        NULL    NULL	
+3321	19      	1       	262         85  	  " "           1        NULL    NULL	
+3322	19      	1       	232         55  	  " "           1        NULL    NULL	
+3323	19      	1       	112         83  	  " "           1        NULL    NULL	
+3324	19      	1       	84          84  	  " "           1        NULL    NULL	
+3325	19      	1       	247         96  	  " "           1        NULL    NULL	
+3326	19      	1       	307         98  	  " "           1        NULL    NULL	
+3327	19      	1       	5           100 	  " "           1        NULL    NULL	
+
